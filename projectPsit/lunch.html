@@ -96,17 +96,16 @@
                             <h5 style="font-family: monospace;">
                                 <form name="form1" method="post" action="text.php">
                                     <ul style="font-family: monospace;">
-                                        <li>Weight : <input type="number" name="Weight" size="20"
-                                                maxlength="40" /><br /></li>
+                                        <li>Weight : <input id="score3" type="text" name="weight" />
+                                        </li>
                                         <br>
                                         <li>Height : <input type="number" name="Height" size="20"
                                                 maxlength="40" /><br /></li>
                                     </ul>
+                                    <input class="btn btn-primary" type="button" value="Generate your food"
+                                        onclick="useifelseif()" />
+                                    <span id="show3"></span>
                                 </form>
-                            </h5>
-                            <a href="https://projectpsit2019.web.app/lunch.html" class="btn btn-primary"
-                                style="background-color: rgb(209, 127, 89); font-family: monospace;">Generate your food!
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -145,14 +144,15 @@
 </body>
 
 <script>
-        function useifelseif() {
-            var score = document.getElementById("score3").value;
-            if (score == "") alert("Input your score")
-            else if (isNaN(score)) alert("Input Incorrect");
-            else if (score > 65) window.location.href = "http://www.w3schools.com";
-            else if (score > 53) window.location.href = "http://www.w3schools.com";
-            else if (score > 44) window.location.href = "http://www.w3schools.com";
-            else window.location.href = "http://www.w3schools.com";
-        }
-    </script>
+    function useifelseif() {
+        var score = document.getElementById("score3").value;
+        if (score == "") alert("Input your score")
+        else if (isNaN(score)) alert("Input Incorrect");
+        else if (score > 65) window.location.href = "http://www.w3schools.com";
+        else if (score > 53) window.location.href = "http://www.w3schools.com";
+        else if (score > 44) window.location.href = "http://www.w3schools.com";
+        else window.location.href = "http://www.w3schools.com";
+    }
+</script>
+
 </html>
