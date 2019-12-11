@@ -20,7 +20,7 @@
         <div class="container" style="background-color: #F3D99D; margin-top:20px; margin-bottom:20px    ">
             <div class="row">
                 <div class="col-md" style="padding:20px 20px;">
-                    <center><img src="lunchnew1.jpg" class="img-fluid"></center>
+                    <center><img src="photo/lunchnew1.jpg" class="img-fluid"></center>
                 </div>
             </div>
             <div class="row">
@@ -57,13 +57,13 @@
             </div>
             <div class="row" style="text-align: center;">
                 <div class="col-md-4" style="padding:15px 8px;">
-                    <img src="images.jpg" class="img-fluid img-thumbnail" width="400" height="300" />
+                    <img src="photo/images.jpg" class="img-fluid img-thumbnail" width="400" height="300" />
                 </div>
                 <div class="col-md-4" style="padding:15px 8px;">
-                    <img src="images2.jpg" class="img-fluid img-thumbnail" width="400" height="300" />
+                    <img src="photo/images2.jpg" class="img-fluid img-thumbnail" width="400" height="300" />
                 </div>
                 <div class="col-md-4" style="padding:15px 8px;">
-                    <img src="images1.jpg" class="img-fluid img-thumbnail" width="400" height="300" />
+                    <img src="photo/images1.jpg" class="img-fluid img-thumbnail" width="400" height="300" />
                 </div>
             </div>
             <hr width="80%" size="3" color="black">
@@ -97,17 +97,18 @@
                             <h5 style="font-family: monospace;">
                                 <form name="form1" method="post" action="text.php">
                                     <ul style="font-family: monospace;">
-                                        <li>Weight : <input type="number" name="Weight" size="20"
-                                                maxlength="40" /><br /></li>
+                                        <li>Weight : <input id="score3" type="text" name="weight" />
+                                        </li>
                                         <br>
                                         <li>Height : <input type="number" name="Height" size="20"
                                                 maxlength="40" /><br /></li>
                                     </ul>
+                                    <input class="btn btn-primary" type="button" value="Generate your food"
+                                        onclick="useifelseif()" />
+                                    <span id="show3"></span>
                                 </form>
                             </h5>
-                            <a href="https://projectpsit2019.web.app/lunch.html" class="btn btn-primary"
-                                style="background-color: rgb(209, 127, 89); font-family: monospace;">Generate your food!
-                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -136,8 +137,20 @@
                 </div>
             </div>
             <a href="https://projectpsit2019.firebaseapp.com/first.html" class="btn btn-primary"
-                style="background-color: sienna; font-family: serif; margin-bottom: 20px; margin-left: 15px;">Main menu</a>
+                style="background-color: sienna; font-family: serif; margin-bottom: 20px; margin-left: 15px;">Main
+                menu</a>
         </div>
 </body>
+<script>
+    function useifelseif() {
+        var score = document.getElementById("score3").value;
+        if (score == "") alert("Input your score")
+        else if (isNaN(score)) alert("Input Incorrect");
+        else if (score > 65) window.location.href = "http://www.w3schools.com";
+        else if (score > 53) window.location.href = "http://www.w3schools.com";
+        else if (score > 44) window.location.href = "http://www.w3schools.com";
+        else window.location.href = "http://www.w3schools.com";
+    }
+</script>
 
 </html>
