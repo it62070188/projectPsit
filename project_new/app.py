@@ -89,14 +89,14 @@ def input4():
 @app.route('/input5', methods=['POST', 'GET'])
 def input5():
     if request.method == 'POST':
-        lis =  ['Beef Steak', 'Pork Steak', 'Salmon Salad', 'PadThai', 'Spaghetti', 'Fish Steak', 'Noodle', 'Ramen', 'Hot Curry', 'Fried Chicken']
+        lis =  ['CEREAL & MILK', 'WESTERN SANDWICH', 'FLUFFY MUFFIN', 'EGGS BENEDICT', 'JUST WHITES (5 EGGS WHITE)', 'SCRAMBLE', 'GREEN WRAP', 'AVOCADO EGG SANDWICH', 'COUNTRY STYLE EGGS BENEDICT', 'GOLDEN BROWN PANCAKES']
         bodys = lis[random.randint(0, 9)]
     return render_template('breakfast.html', body_ssa=bodys)
 
 @app.route('/input6', methods=['POST', 'GET'])
 def input6():
     if request.method == 'POST':
-        lis =  ['Beef Steak', 'Pork Steak', 'Salmon Salad', 'PadThai', 'Spaghetti', 'Fish Steak', 'Noodle', 'Ramen', 'Hot Curry', 'Fried Chicken']
+        lis =  ['PadThai', 'Spaghetti', 'Fish Steak', 'Noodle', 'Ramen', 'Striped Bass With Radish Salsa Verde', 'Grilled Steak Tortilla Salad', 'Vegan Black Bean Soup', 'Speedy Eggplant Parmesan', 'Roasted Tomato & Chive Pizza']
         bodys = lis[random.randint(0, 9)]
     return render_template('dinner.html', body_ssa=bodys)
 
