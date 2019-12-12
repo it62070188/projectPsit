@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lunch</title>
+    <title>Breakfast</title>
     <link rel="stylesheet" href="../static/css/bootstrap.min.css">
     </link>
     <style>
@@ -17,16 +17,17 @@
 
 <body style="background-color: #F6EFB3;">
     <div style="background-color: #F6EFB3;">
-        <div class="container" style="background-color: #F3D99D;margin-top:20px; margin-bottom:20px">
+        <div class="container" style="background-color: #F3D99D; margin-top:20px; margin-bottom:20px    ">
             <div class="row">
                 <div class="col-md" style="padding:20px 20px;">
-                    <center><img src="../static/lunchnew1.jpg" class="img-fluid"></center>
+                    <center><img src="photo/lunchnew1.jpg" class="img-fluid"></center>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md" style="font-family: serif; font-style: italic; font-size: 50px;">
+                <div class="col-md"
+                    style="font-family: serif; font-style: italic; font-size: 50px; text-align: center;">
                     <b>
-                        <center>Lunch for today</center>
+                        Breakfast for today
                     </b>
                 </div>
             </div>
@@ -37,10 +38,10 @@
                         <div class="card border-warning mb-3" style="max-width: 24rem; max-height: 30rem;">
                             <div class="card-header bg-transparent border-warning">
                                 <h4 style="color: #FF9966;">
-                                    <b>Why is lunch so important?</b></h4>
+                                    <b>Why is breakfast so important?</b></h4>
                             </div>
                             <div class="card-body text-warning">
-                                <h4..! class="card-title">Why is lunch so important?</h4..!>
+                                <h4..! class="card-title">Why is breakfast so important?</h4..!>
                                 <p class="card-text"> We get a strong and healthy body with a healthy mind
                                     as well by eating healthy food. Healthy food keeps fit and active.
                                     <br><br>
@@ -56,13 +57,13 @@
             </div>
             <div class="row" style="text-align: center;">
                 <div class="col-md-4" style="padding:15px 8px;">
-                    <img src="../static/images.jpg" class="img-fluid img-thumbnail" width="400" height="300" />
+                    <img src="photo/images.jpg" class="img-fluid img-thumbnail" width="400" height="300" />
                 </div>
                 <div class="col-md-4" style="padding:15px 8px;">
-                    <img src="../static/images2.jpg" class="img-fluid img-thumbnail" width="400" height="300" />
+                    <img src="photo/images2.jpg" class="img-fluid img-thumbnail" width="400" height="300" />
                 </div>
                 <div class="col-md-4" style="padding:15px 8px;">
-                    <img src="../static/images1.jpg" class="img-fluid img-thumbnail" width="400" height="300" />
+                    <img src="photo/images1.jpg" class="img-fluid img-thumbnail" width="400" height="300" />
                 </div>
             </div>
             <hr width="80%" size="3" color="black">
@@ -75,13 +76,13 @@
             </div>
             <div class="row" style="padding:20px 20px 30px;">
                 <div class="col-md-6" style="font-family: serif; font-style: italic; font-size: 19px;">
-                    <div class="card" style="background-color: sandybrown; margin-top: 20px">
+                    <div class="card" style="background-color: sandybrown;">
                         <div class="card-body">
                             <div class="card-header bg-transparent border-warning">
                                 <center>
                                     <h4>
                                         <b>
-                                            Mode <u>Healthy</u>
+                                            <u>Healthy</u> Option
                                         </b>
                                     </h4>
                                 </center>
@@ -94,78 +95,62 @@
 
                             </p>
                             <h5 style="font-family: monospace;">
-                                <form name="form1" method="POST" action="/input1">
+                                <form name="form1" method="post" action="text.php">
                                     <ul style="font-family: monospace;">
-                                        <li>Weight : <input id="score3" type="number" name="weight" />
+                                        <li>Weight : <input id="score3" type="text" name="weight" />
                                         </li>
                                         <br>
                                         <li>Height : <input type="number" name="Height" size="20"
                                                 maxlength="40" /><br /></li>
                                     </ul>
-                                    <input class="btn btn-primary" type="button" value="Generate your food"  style="background: #d17f59;" />
+                                    <input class="btn btn-primary" type="button" value="Generate your food"
+                                        onclick="useifelseif()" style="background: #d17f59;"/>
+                                    <span id="show3"></span>
                                 </form>
+                            </h5>
+
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6" style="font-family: serif; font-style: italic; font-size: 19px;">
-                    <div class="row">
-                        <div class="card" style="background-color: sandybrown; margin-top: 20px;">
-                            <div class="card-body">
-                                <div class="card-header bg-transparent border-warning">
-                                    <center>
-                                        <h4>
-                                            <b>
-                                                Mode <u>General</u>
-                                            </b>
-                                        </h4>
-                                    </center>
-                                </div>
-                                <p class="card-text">
-                                    This mode is default so it's random foods for you.
-                                    For those who can't think out what to eat.
-                                </p>
-                                <a href="../templates/lunch.html" class="btn btn-primary"
-                                    style="background-color: rgb(209, 127, 89); font-family: monospace;">Generate your
-                                    food!
-                                </a>
+                    <div class="card" style="background-color: sandybrown;">
+                        <div class="card-body">
+                            <div class="card-header bg-transparent border-warning">
+                                <center>
+                                    <h4>
+                                        <b>
+                                            <u>Normal</u> Option
+                                        </b>
+                                    </h4>
+                                </center>
                             </div>
+                            <p class="card-text">
+                                This mode is default so it's random foods for you.
+                                For those who can't think out what to eat.
+                            </p>
+                            <a href="https://projectpsit2019.web.app/lunch.html" class="btn btn-primary"
+                                style="background-color: rgb(209, 127, 89); font-family: monospace;">Generate your food!
+                            </a>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="card" style="background-color: sandybrown; margin-top: 20px;">
-                            <div class="card-body">
-                                <div class="card-header bg-transparent border-warning">
-                                    <center>
-                                        <h4>
-                                            <b>
-                                                Mode <u>General</u>
-                                            </b>
-                                        </h4>
-                                    </center>
-                                </div>
-                                <p class="card-text">
-                                    This mode is default so it's random foods for you.
-                                    For those who can't think out what to eat.
-                                </p>
-                                <a href="../templates/lunch.html" class="btn btn-primary"
-                                    style="background-color: rgb(209, 127, 89); font-family: monospace;">Generate your
-                                    food!
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    {{body_ssa}}
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md" style="padding:15px 30px;">
-                    <a href="../templates/first.html" class="btn btn-primary"
-                        style="background-color: sienna; font-family: monospace;">Main menu
-                    </a>
-                </div>
-            </div>
+            <a href="https://projectpsit2019.firebaseapp.com/first.html" class="btn btn-primary"
+                style="background-color: sienna; font-family: serif; margin-bottom: 20px; margin-left: 15px;">Main
+                menu</a>
         </div>
 </body>
-
+<script>
+    function useifelseif() {
+        var score = document.getElementById("score3").value;
+        if (score == "") alert("Input your score")
+        else if (isNaN(score)) alert("Input Incorrect");
+        else if (score > 65) window.location.href = "http://www.w3schools.com";
+        else if (score > 53) window.location.href = "http://www.w3schools.com";
+        else if (score > 44) window.location.href = "http://www.w3schools.com";
+        else window.location.href = "http://www.w3schools.com";
+    }
+</script>
 
 </html>

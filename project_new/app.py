@@ -2,7 +2,8 @@ from flask import Flask, render_template, request
 import random
 app = Flask(__name__)
 
-bodys = ""
+body = 0
+bodys = ''
 
 @app.route('/')
 def main():
@@ -24,7 +25,7 @@ def dinner():
 @app.route('/input1', methods=['POST', 'GET'])
 def input1():
     if request.method == 'POST':
-        w = int(request.form['Weight'])
+        w = int(request.form['weight'])
         t = int(request.form['Height'])
         body = w / (t/100)**2
         lis = ['Beef steak', 'pork steak', 'Salmon Salad', 'padthai', 'spakette', 'eeee', 'eeeeeeee', 'dokkkkk', '555555', 'eieieiei']
@@ -32,7 +33,7 @@ def input1():
         if body <= 20:
             bodys = lis[random.randint(0, 9)]
         else:
-            bodys = lis1[random.randint(0, 9)]
+            bodys = lis_forfat[random.randint(0, 9)]
         return render_template('lunch.html', body_ssa=bodys)
 
 if __name__ == '__main__':
