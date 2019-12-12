@@ -28,8 +28,10 @@ def input1():
         w = int(request.form['weight'])
         t = int(request.form['Height'])
         body = w / (t/100)**2
-        lis = ['Beef steak', 'pork steak', 'Salmon Salad', 'padthai', 'spakette', 'eeee', 'eeeeeeee', 'dokkkkk', '555555', 'eieieiei']
-        lis_forfat = ['Salad Greens', 'Lean Protein', 'Whole Grains', '6666666', '8888888', '4444444', '777777777', '1121212112', '444444545', '10101010101']
+        lis = ['Noodle', 'Pizza', 'Fried Rice', 'Roasted Pork', 'Spaghetti', 'Grilled Chicken', 'Sushi', 'Burger', 'Sandwich', 'Tomyum Kung']
+       
+        lis_forfat = ['Chicken and Red Plum Salad', 'Grilled Ratatouille Linguine', 'Grilled Steak Tortilla Salad', 'Creamy Lemon Chicken Pasta',
+                     'Beet, Mushroom, and Avocado Salad', 'Roasted Mushroom Parmesan Sandwich', 'Fried Avocado Tacos', 'Bacon and Apple Farro Salad', 'Spicy Tuna Sandwiches', 'Veggie Wraps with Goat Cheese']
         lis = list(map(str.upper, lis))
         lis_forfat = list(map(str.upper, lis_forfat))    
         if body <= 20:
@@ -65,8 +67,10 @@ def input3():
         w = int(request.form['weight'])
         t = int(request.form['Height'])
         body = w / (t/100)**2
-        lis = ['Beef steak', 'pork steak', 'Salmon Salad', 'padthai', 'spakette', 'eeee', 'eeeeeeee', 'dokkkkk', '555555', 'eieieiei']
-        lis_forfat = ['Salad Greens', 'Lean Protein', 'Whole Grains', '6666666', '8888888', '4444444', '777777777', '1121212112', '444444545', '10101010101']
+        lis = ['Beef Steak', 'Pork Steak', 'Salmon Salad', 'PadThai', 'Spaghetti', 'Fish Steak', 'Noodle', 'Ramen', 'Hot Curry', 'Fried Chicken']
+        
+        lis_forfat = ['Striped Bass With Radish Salsa Verde', 'Grilled Steak Tortilla Salad', 'Vegan Black Bean Soup', 'Speedy Eggplant Parmesan',
+                     'Roasted Tomato & Chive Pizza', 'Grilled Ratatouille Linguine', 'Roasted Shrimp & Poblano Salad', 'Grilled Chicken With Herbed Corn Salsa', 'Soba Salad With Grilled Tofu', 'Salmon Burgers With Cabbage-Apple Slaw']
         lis = list(map(str.upper, lis))
         lis_forfat = list(map(str.upper, lis_forfat))
         if body <= 20:
@@ -75,6 +79,26 @@ def input3():
             bodys = lis_forfat[random.randint(0, 9)]
         return render_template('dinner.html', body_ssa=bodys)
 
+@app.route('/input4', methods=['POST', 'GET'])
+def input4():
+    if request.method == 'POST':
+        lis =  ['Beef Steak', 'Pork Steak', 'Salmon Salad', 'PadThai', 'Spaghetti', 'Fish Steak', 'Noodle', 'Ramen', 'Hot Curry', 'Fried Chicken']
+        bodys = lis[random.randint(0, 9)]
+    return render_template('lunch.html', body_ssa=bodys)
+
+@app.route('/input5', methods=['POST', 'GET'])
+def input5():
+    if request.method == 'POST':
+        lis =  ['Beef Steak', 'Pork Steak', 'Salmon Salad', 'PadThai', 'Spaghetti', 'Fish Steak', 'Noodle', 'Ramen', 'Hot Curry', 'Fried Chicken']
+        bodys = lis[random.randint(0, 9)]
+    return render_template('breakfast.html', body_ssa=bodys)
+
+@app.route('/input6', methods=['POST', 'GET'])
+def input6():
+    if request.method == 'POST':
+        lis =  ['Beef Steak', 'Pork Steak', 'Salmon Salad', 'PadThai', 'Spaghetti', 'Fish Steak', 'Noodle', 'Ramen', 'Hot Curry', 'Fried Chicken']
+        bodys = lis[random.randint(0, 9)]
+    return render_template('dinner.html', body_ssa=bodys)
 
 
 if __name__ == '__main__':
