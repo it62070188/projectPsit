@@ -95,7 +95,7 @@
 
                             </p>
                             <h5 style="font-family: monospace;">
-                                <form name="form1" method="post" action="text.php">
+                                <form name="form1" method="POST" action="/input2">
                                     <ul style="font-family: monospace;">
                                         <li>Weight : <input id="score3" type="text" name="weight" />
                                         </li>
@@ -103,9 +103,7 @@
                                         <li>Height : <input type="number" name="Height" size="20"
                                                 maxlength="40" /><br /></li>
                                     </ul>
-                                    <input class="btn btn-primary" type="button" value="Generate your food"
-                                        onclick="useifelseif()" style="background: #d17f59;" />
-                                    <span id="show3"></span>
+                                    <li><input type="submit"></li>
                                 </form>
                             </h5>
 
@@ -129,7 +127,7 @@
                                     This mode is default so it's random foods for you.
                                     For those who can't think out what to eat.
                                 </p>
-                                <a href="https://projectpsit2019.web.app/lunch.html" class="btn btn-primary"
+                                <a href="/templates/breakfast.html" class="btn btn-primary"
                                     style="background-color: rgb(209, 127, 89); font-family: monospace;">Generate your
                                     food!
                                 </a>
@@ -149,10 +147,9 @@
                                     </center>
                                 </div>
                                 <p class="card-text">
-                                    This mode is default so it's random foods for you.
-                                    For those who can't think out what to eat.
+                                    <p>{{body_ssa}}</p>
                                 </p>
-                                <a href="https://projectpsit2019.web.app/lunch.html" class="btn btn-primary"
+                                <a href="/templates/breakfast.html" class="btn btn-primary"
                                     style="background-color: rgb(209, 127, 89); font-family: monospace;">Generate your
                                     food!
                                 </a>
@@ -161,21 +158,11 @@
                     </div>
                 </div>
             </div>
-            <a href="https://projectpsit2019.firebaseapp.com/first.html" class="btn btn-primary"
+            <a href="/templates/first.html" class="btn btn-primary"
                 style="background-color: sienna; font-family: serif; margin-bottom: 20px; margin-left: 15px;">Main
                 menu</a>
         </div>
 </body>
-<script>
-    function useifelseif() {
-        var score = document.getElementById("score3").value;
-        if (score == "") alert("Input your score")
-        else if (isNaN(score)) alert("Input Incorrect");
-        else if (score > 65) window.location.href = "http://www.w3schools.com";
-        else if (score > 53) window.location.href = "http://www.w3schools.com";
-        else if (score > 44) window.location.href = "http://www.w3schools.com";
-        else window.location.href = "http://www.w3schools.com";
-    }
-</script>
+
 
 </html>
