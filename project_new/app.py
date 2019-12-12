@@ -79,7 +79,12 @@ def input3():
             bodys = lis_forfat[random.randint(0, 9)]
         return render_template('dinner.html', body_ssa=bodys)
 
-
+@app.route('/input4', methods=['POST', 'GET'])
+def input4():
+    if request.method == 'POST':
+        lis =  ['Beef Steak', 'Pork Steak', 'Salmon Salad', 'PadThai', 'Spaghetti', 'Fish Steak', 'Noodle', 'Ramen', 'Hot Curry', 'Fried Chicken']
+        bodys = lis[random.randint(0, 9)]
+    return render_template('lunch.html', body_ssa=bodys)
 
 if __name__ == '__main__':
     app.debug = True
