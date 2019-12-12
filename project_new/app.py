@@ -9,6 +9,10 @@ bodys = ''
 def main():
     return render_template('first.html')
 
+@app.route('/templates/first.html')
+def main2():
+    return render_template('first.html')
+
 @app.route('/templates/lunch.html')
 def lunch():
     return render_template('lunch.html')
