@@ -25,8 +25,8 @@ def dinner():
 @app.route('/input1', methods=['POST', 'GET'])
 def input1():
     if request.method == 'POST':
-        w = int(request.form['weight'])
-        t = int(request.form['Height'])
+        w = int(float(request.form['weight']))
+        t = int(float(request.form['Height']))
         body = w / (t/100)**2
         lis = ['Noodle', 'Pizza', 'Fried Rice', 'Roasted Pork', 'Spaghetti', 'Grilled Chicken', 'Sushi', 'Burger', 'Sandwich', 'Tomyum Kung']
        
@@ -44,8 +44,8 @@ def input1():
 @app.route('/input2', methods=['POST', 'GET'])
 def input2():
     if request.method == 'POST':
-        w = int(request.form['weight'])
-        t = int(request.form['Height'])
+        w = int(float(request.form['weight']))
+        t = int(float(request.form['Height']))
         body = w / (t/100)**2
         lis = ['VEGGIE SKILLET', 'MEAT LOVERS SKILLER', 'BACON PANCAKES', 'FRENCH TOAST', 'OREO PANCAKES', 'OREO WAFFLES', 'SALTED CARAMEL BANANA PANCAKES'
                 , 'ULTIMATE OMELETTE', 'OATBRAN MUFFIN', 'BAGEL SANDWICH', 'WAFFLE SLAM', 'HAM & CHEESE OMELET', 'PLAIN OMELET', 'BANANA PANCAKES', 'CHOCOLATE CHIP PANCAKES'
@@ -64,8 +64,8 @@ def input2():
 @app.route('/input3', methods=['POST', 'GET'])
 def input3():
     if request.method == 'POST':
-        w = int(request.form['weight'])
-        t = int(request.form['Height'])
+        w = int(float((request.form['weight'])))
+        t = int(float(request.form['Height']))
         body = w / (t/100)**2
         lis = ['Beef Steak', 'Pork Steak', 'Salmon Salad', 'PadThai', 'Spaghetti', 'Fish Steak', 'Noodle', 'Ramen', 'Hot Curry', 'Fried Chicken']
         
