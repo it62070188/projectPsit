@@ -43,8 +43,13 @@ def input2():
         w = int(request.form['weight'])
         t = int(request.form['Height'])
         body = w / (t/100)**2
-        lis = ['Beef steak', 'pork steak', 'Salmon Salad', 'padthai', 'spakette', 'eeee', 'eeeeeeee', 'dokkkkk', '555555', 'eieieiei']
-        lis_forfat = ['Salad Greens', 'Lean Protein', 'Whole Grains', '6666666', '8888888', '4444444', '777777777', '1121212112', '444444545', '10101010101']
+        lis = ['VEGGIE SKILLET', 'MEAT LOVERS SKILLER', 'BACON PANCAKES', 'FRENCH TOAST', 'OREO PANCAKES', 'OREO WAFFLES', 'SALTED CARAMEL BANANA PANCAKES'
+                , 'ULTIMATE OMELETTE', 'OATBRAN MUFFIN', 'BAGEL SANDWICH', 'WAFFLE SLAM', 'HAM & CHEESE OMELET', 'PLAIN OMELET', 'BANANA PANCAKES', 'CHOCOLATE CHIP PANCAKES'
+                , 'PLAIN EGG SANDWHICH', 'TWO EGG BREAKFAST', 'CINNAMON ROLL', 'YOGURT PARFAIT', 'SUNRISE BREAKFAST'
+]
+        lis_forfat = ['RICE PORRIDGE', '4 SLICES OF BREAD', 'CLEAR SOUP WITH TOFU AND MINCED PORK', 'A STEAMED EGGS', 'A BANANA ',
+                        'A CUP OF COFFEE', 'TOMATO JUICE', 'MILK', 'GUAVA', 'STEWED PORK SOUP WITH MORNING GLORY AND BEAN SPROUT', 
+                        'STIR FRIED TOFU WITH BEAN SPROUTS', 'BLOOD BOIL']
         if body <= 20:
             bodys = lis[random.randint(0, 9)]
         else:
