@@ -25,8 +25,8 @@ def dinner():
 @app.route('/input1', methods=['POST', 'GET'])
 def input1():
     if request.method == 'POST':
-        w = int(request.form['weight'])
-        t = int(request.form['Height'])
+        w = float(request.form['weight'])
+        t = float(request.form['Height'])
         body = w / (t/100)**2
         lis = ['Noodle', 'Pizza', 'Fried Rice', 'Roasted Pork', 'Spaghetti', 'Grilled Chicken', 'Sushi', 'Burger', 'Sandwich', 'Tomyum Kung']
         lis_forfat = ['Chicken and Red Plum Salad', 'Grilled Ratatouille Linguine', 'Grilled Steak Tortilla Salad', 'Creamy Lemon Chicken Pasta', 'Beet, Mushroom, and Avocado Salad', 'Roasted Mushroom Parmesan Sandwich', 'Fried Avocado Tacos', 'Bacon and Apple Farro Salad', 'Spicy Tuna Sandwiches', 'Veggie Wraps with Goat Cheese']
@@ -42,8 +42,8 @@ def input1():
 @app.route('/input2', methods=['POST', 'GET'])
 def input2():
     if request.method == 'POST':
-        w = int(request.form['weight'])
-        t = int(request.form['Height'])
+        w = float(request.form['weight'])
+        t = float(request.form['Height'])
         body = w / (t/100)**2
         lis = ['VEGGIE SKILLET', 'MEAT LOVERS SKILLER', 'BACON PANCAKES', 'FRENCH TOAST', 'OREO PANCAKES', 'OREO WAFFLES', 'SALTED CARAMEL BANANA PANCAKES'
                  , 'ULTIMATE OMELETTE', 'OATBRAN MUFFIN', 'BAGEL SANDWICH', 'WAFFLE SLAM', 'HAM & CHEESE OMELET', 'PLAIN OMELET', 'BANANA PANCAKES', 'CHOCOLATE CHIP PANCAKES'
@@ -63,8 +63,8 @@ def input2():
 @app.route('/input3', methods=['POST', 'GET'])
 def input3():
     if request.method == 'POST':
-        w = int(request.form['weight'])
-        t = int(request.form['Height'])
+        w = float(request.form['weight'])
+        t = float(request.form['Height'])
         body = w / (t/100)**2
         lis = ['Beef Steak', 'Pork Steak', 'Salmon Salad', 'PadThai', 'Spaghetti', 'Fish Steak', 'Noodle', 'Ramen', 'Hot Curry', 'Fried Chicken']
         lis_forfat = ['Striped Bass With Radish Salsa Verde', 'Grilled Steak Tortilla Salad', 'Vegan Black Bean Soup', 'Speedy Eggplant Parmesan', 'Roasted Tomato & Chive Pizza', 'Grilled Ratatouille Linguine', 'Roasted Shrimp & Poblano Salad', 'Grilled Chicken With Herbed Corn Salsa', 'Soba Salad With Grilled Tofu', 'Salmon Burgers With Cabbage-Apple Slaw']
@@ -76,8 +76,24 @@ def input3():
             bodys = lis_forfat[random.randint(0, 9)]
         return render_template('dinner.html', body_ssa=bodys)
 
+@app.route('/input4', methods=['POST', 'GET'])
+def input4():
+
+        lis = ['Beef steak', 'pork steak', 'Salmon Salad', 'padthai', 'spakette', 'eeee', 'eeeeeeee', 'dokkkkk', '555555', 'eieieiei']
+        bodys = lis[random.randint(0, 9)]
+        return render_template('dinner.html', body_ssa=bodys)
 
 
+@app.route('/input5', methods=['POST', 'GET'])
+def input5():
+        lis = ['Beef steak', 'pork steak', 'Salmon Salad', 'padthai', 'spakette', 'eeee', 'eeeeeeee', 'dokkkkk', '555555', 'eieieiei']
+        bodys = lis[random.randint(0, 9)]
+        return render_template('dinner.html', body_ssa=bodys)
+@app.route('/input6', methods=['POST', 'GET'])
+def input6():
+        lis = ['Beef steak', 'pork steak', 'Salmon Salad', 'padthai', 'spakette', 'eeee', 'eeeeeeee', 'dokkkkk', '555555', 'eieieiei']
+        bodys = lis[random.randint(0, 9)]
+        return render_template('dinner.html', body_ssa=bodys)
 if __name__ == '__main__':
     app.debug = True
     app.run()
