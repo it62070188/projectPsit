@@ -89,7 +89,7 @@ def input4():
 @app.route('/input5', methods=['POST', 'GET'])
 def input5():
     if request.method == 'POST':
-        lis =  ['CEREAL & MILK', 'WESTERN SANDWICH', 'FLUFFY MUFFIN', 'EGGS BENEDICT', 'JUST WHITES (5 EGGS WHITE)', 'SCRAMBLE', 'GREEN WRAP', 'AVOCADO EGG SANDWICH', 'COUNTRY STYLE EGGS BENEDICT', 'GOLDEN BROWN PANCAKES']
+        lis =  ['CEREAL & MILK', 'WESTERN SANDWICH', 'FLUFFY MUFFIN', 'EGGS BENEDICT', 'JUST WHITES (5 EGGS WHITE)', 'SCRAMBLE', 'GREEN GRAPE', 'AVOCADO EGG SANDWICH', 'COUNTRY STYLE EGGS BENEDICT', 'GOLDEN BROWN PANCAKES']
         bodys = lis[random.randint(0, 9)]
     return render_template('breakfast.html', body_ssa=bodys)
 
