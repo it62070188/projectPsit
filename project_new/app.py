@@ -30,8 +30,8 @@ def input1():
         body = w / (t/100)**2
         lis = ['Noodle', 'Pizza', 'Fried Rice', 'Roasted Pork', 'Spaghetti', 'Grilled Chicken', 'Sushi', 'Burger', 'Sandwich', 'Tomyum Kung']
         lis_forfat = ['Chicken and Red Plum Salad', 'Grilled Ratatouille Linguine', 'Grilled Steak Tortilla Salad', 'Creamy Lemon Chicken Pasta', 'Beet, Mushroom, and Avocado Salad', 'Roasted Mushroom Parmesan Sandwich', 'Fried Avocado Tacos', 'Bacon and Apple Farro Salad', 'Spicy Tuna Sandwiches', 'Veggie Wraps with Goat Cheese']
-        lis = map(str.upper, lis)
-        lis_forfat = map(str.upper, lis_forfat)
+        lis = list(map(str.upper, lis))
+        lis_forfat = list(map(str.upper, lis_forfat))
         if body <= 20:
             bodys = lis[random.randint(0, 9)]
         else:
