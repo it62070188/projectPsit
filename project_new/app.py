@@ -25,13 +25,13 @@ def dinner():
 @app.route('/input1', methods=['POST', 'GET'])
 def input1():
     if request.method == 'POST':
-        w = float(request.form['weight'])
-        t = float(request.form['Height'])
+        w = int(request.form['weight'])
+        t = int(request.form['Height'])
         body = w / (t/100)**2
-        lis = ['Noodle', 'Pizza', 'Fried Rice', 'Roasted Pork', 'Spaghetti', 'Grilled Chicken', 'Sushi', 'Burger', 'Sandwich', 'Tomyum Kung']
-        lis_forfat = ['Chicken and Red Plum Salad', 'Grilled Ratatouille Linguine', 'Grilled Steak Tortilla Salad', 'Creamy Lemon Chicken Pasta', 'Beet, Mushroom, and Avocado Salad', 'Roasted Mushroom Parmesan Sandwich', 'Fried Avocado Tacos', 'Bacon and Apple Farro Salad', 'Spicy Tuna Sandwiches', 'Veggie Wraps with Goat Cheese']
-        lis = map(str.upper, lis)
-        lis_forfat = map(str.upper, lis_forfat)
+        lis = ['Beef steak', 'pork steak', 'Salmon Salad', 'padthai', 'spakette', 'eeee', 'eeeeeeee', 'dokkkkk', '555555', 'eieieiei']
+        lis_forfat = ['Salad Greens', 'Lean Protein', 'Whole Grains', '6666666', '8888888', '4444444', '777777777', '1121212112', '444444545', '10101010101']
+        lis = list(map(str.upper, lis))
+        lis_forfat = list(map(str.upper, lis_forfat))    
         if body <= 20:
             bodys = lis[random.randint(0, 9)]
         else:
@@ -42,12 +42,14 @@ def input1():
 @app.route('/input2', methods=['POST', 'GET'])
 def input2():
     if request.method == 'POST':
-        w = float(request.form['weight'])
-        t = float(request.form['Height'])
+        w = int(request.form['weight'])
+        t = int(request.form['Height'])
         body = w / (t/100)**2
         lis = ['Beef steak', 'pork steak', 'Salmon Salad', 'padthai', 'spakette', 'eeee', 'eeeeeeee', 'dokkkkk', '555555', 'eieieiei']
         lis_forfat = ['Salad Greens', 'Lean Protein', 'Whole Grains', '6666666', '8888888', '4444444', '777777777', '1121212112', '444444545', '10101010101']
-        if body <= 23:
+        lis = list(map(str.upper, lis))
+        lis_forfat = list(map(str.upper, lis_forfat))
+        if body <= 20:
             bodys = lis[random.randint(0, 9)]
         else:
             bodys = lis_forfat[random.randint(0, 9)]
@@ -57,35 +59,21 @@ def input2():
 @app.route('/input3', methods=['POST', 'GET'])
 def input3():
     if request.method == 'POST':
-        w = float(request.form['weight'])
-        t = float(request.form['Height'])
+        w = int(request.form['weight'])
+        t = int(request.form['Height'])
         body = w / (t/100)**2
         lis = ['Beef steak', 'pork steak', 'Salmon Salad', 'padthai', 'spakette', 'eeee', 'eeeeeeee', 'dokkkkk', '555555', 'eieieiei']
         lis_forfat = ['Salad Greens', 'Lean Protein', 'Whole Grains', '6666666', '8888888', '4444444', '777777777', '1121212112', '444444545', '10101010101']
-        if body <= 23:
+        lis = list(map(str.upper, lis))
+        lis_forfat = list(map(str.upper, lis_forfat))
+        if body <= 20:
             bodys = lis[random.randint(0, 9)]
         else:
             bodys = lis_forfat[random.randint(0, 9)]
         return render_template('dinner.html', body_ssa=bodys)
 
-@app.route('/input4', methods=['POST', 'GET'])
-def input4():
-
-        lis = ['Beef steak', 'pork steak', 'Salmon Salad', 'padthai', 'spakette', 'eeee', 'eeeeeeee', 'dokkkkk', '555555', 'eieieiei']
-        bodys = lis[random.randint(0, 9)]
-        return render_template('dinner.html', body_ssa=bodys)
 
 
-@app.route('/input5', methods=['POST', 'GET'])
-def input5():
-        lis = ['Beef steak', 'pork steak', 'Salmon Salad', 'padthai', 'spakette', 'eeee', 'eeeeeeee', 'dokkkkk', '555555', 'eieieiei']
-        bodys = lis[random.randint(0, 9)]
-        return render_template('dinner.html', body_ssa=bodys)
-@app.route('/input6', methods=['POST', 'GET'])
-def input6():
-        lis = ['Beef steak', 'pork steak', 'Salmon Salad', 'padthai', 'spakette', 'eeee', 'eeeeeeee', 'dokkkkk', '555555', 'eieieiei']
-        bodys = lis[random.randint(0, 9)]
-        return render_template('dinner.html', body_ssa=bodys)
 if __name__ == '__main__':
     app.debug = True
     app.run()
