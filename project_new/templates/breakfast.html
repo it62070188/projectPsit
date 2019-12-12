@@ -76,7 +76,7 @@
             </div>
             <div class="row" style="padding:20px 20px 30px;">
                 <div class="col-md-6" style="font-family: serif; font-style: italic; font-size: 19px;">
-                    <div class="card" style="background-color: sandybrown;">
+                    <div class="card" style="background-color: sandybrown; margin-top:20px;">
                         <div class="card-body">
                             <div class="card-header bg-transparent border-warning">
                                 <center>
@@ -103,7 +103,8 @@
                                         <li>Height : <input type="number" name="Height" size="20"
                                                 maxlength="40" /><br /></li>
                                     </ul>
-                                    <li><input type="submit"></li>
+                                    <input class="btn btn-primary" type="submit" value="Generate Your Food"
+                                        style="background: #d17f59;">
                                 </form>
                             </h5>
 
@@ -112,7 +113,7 @@
                 </div>
                 <div class="col-md-6" style="font-family: serif; font-style: italic; font-size: 19px;">
                     <div class="row">
-                        <div class="card" style="background-color: sandybrown;">
+                        <div class="card" style="background-color: sandybrown; margin-top: 20px">
                             <div class="card-body">
                                 <div class="card-header bg-transparent border-warning">
                                     <center>
@@ -127,24 +128,25 @@
                                     This mode is default so it's random foods for you.
                                     For those who can't think out what to eat.
                                 </p>
-                                <a href="/templates/breakfast.html" class="btn btn-primary"
-                                    style="background-color: rgb(209, 127, 89); font-family: monospace;">Generate your
-                                    food!
-                                </a>
+                                <input class="btn btn-primary" type="submit" value="Generate Your Food"
+                                    style="background: #d17f59;">
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="card" style="background-color: sandybrown; margin-top: 20px;">
+                        <div class="card" style="background-color: sandybrown; margin-top: 20px; width: 100%;">
                             <div class="card-body">
-                                <div class="card-header bg-transparent border-warning">
-                                    <center>
-                                        <h4>
-                                            <b>
-                                                Mode <u>General</u>
-                                            </b>
-                                        </h4>
-                                    </center>
+                                <div class="card-header bg-transparent border-warning" style="text-align: center;">
+                                    <h4>
+                                        <b>
+                                            You should eat
+                                        </b>
+                                    </h4>
+                                </div>
+                                <div style="text-align: center; font-size: 300%;">
+                                    <p class="card-text">
+                                        <b>{{body_ssa}}</b>
+                                    </p>
                                 </div>
                                 <p class="card-text">
                                     <center><p><b>{{body_ssa}}</b></p></center>
